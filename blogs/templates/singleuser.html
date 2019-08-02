@@ -1,0 +1,14 @@
+<!--USED TO ONLY SHOW A SINGLE USERS BLOG POSTS-->
+
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {% for blog in blogs %}
+    <h3><a href="/blog?id={{blogs.id}}">{{blog.title}}</a></h3>
+    <p>{{blog.body}}</p>
+    <!-- <p><small>Blogger: <a href="/blog?user={{blogs.owner.id}}">{{blogs.owner.username}}</a></small></p> -->
+    <hr>
+    {% endfor %}
+
+{% endblock %}
